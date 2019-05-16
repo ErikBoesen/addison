@@ -11,8 +11,11 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/control", methods=["GET", "POST"])
+@app.route("/control", methods=["GET"])
 def control():
-    if request.method == "POST":
-        emit("play", {"Should I do it?": "Probably"}, broadcast=True)
-    return render_template("send.html")
+    return render_template("control.html")
+
+
+@socketio.on("broadcast")
+def broadcast():
+    emit("play", {"Should I do it?": "Probably"}, broadcast=True)
