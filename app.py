@@ -14,5 +14,5 @@ def home():
 @app.route("/control", methods=["GET", "POST"])
 def control():
     if request.method == "POST":
-        send("play", broadcast=True)
+        emit("play", {"Should I do it?": "Probably"}, broadcast=True)
     return render_template("send.html")

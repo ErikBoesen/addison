@@ -14,8 +14,9 @@
             var socket = io.connect('http://' + document.domain + ':' + location.port);
             socket.on('connect', function() {
                 socket.emit('my event', {data: 'I\'m connected!'});
+                console.log(socket);
             });
         </script>
-        <script type="text/javascript" src="{% block script %}{% endblock %}"></script>
+        <script type="text/javascript" src="/static/scripts/{% block script %}{% endblock %}.js"></script>
     </body>
 </html>
