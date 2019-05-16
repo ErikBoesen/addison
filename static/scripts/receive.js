@@ -1,3 +1,3 @@
 socket.on("play", function() {
-    console.log("Playing!!");
+    console.log("Playing sound.");
 });

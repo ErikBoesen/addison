@@ -18,4 +18,4 @@ def control():
 
 @socketio.on("broadcast")
 def broadcast():
-    emit("play", {"Should I do it?": "Probably"}, broadcast=True)
+    emit("play", broadcast=True)
