@@ -2,3 +2,6 @@ body {
     background: #333;
     color: white;
 }
+section#preparation {
+    display: none;
+}

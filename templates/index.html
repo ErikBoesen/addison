@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block main %}
-<p>This page will play a sound when ready!</p>
+<section id="information">
+    <h1>SoundSync</h1>
+    <button id="accept">Wait to play sound</button>
+</section>
+<section id="preparation">
+    <h1>Waiting for broadcast!</h1>
+</section>
 {% endblock %}
 {% block script %}receive{% endblock %}
